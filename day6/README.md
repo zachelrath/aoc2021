@@ -8,7 +8,7 @@ node day6.js
 ## Results
 ```
 TOTAL FISH after 80 days: 374928
-TOTAL FISH after 256 days: 1687617803407>  
+TOTAL FISH after 256 days: 1687617803407 
 ```
 
 ## Space/time complexity
