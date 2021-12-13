@@ -1,19 +1,23 @@
-const input = require("fs").readFileSync("input.txt").toString().split(",").map(x=>parseInt(x,10));
+// Model the population by a single array
+// where each item is the number of fish with that index number of days remaining.
 const state = Array(9).fill(0);
-input.forEach(n => state[n] += 1);
 
-const part1 = 80;
-const part2 = 256;
+// Load input population into state
+require("fs").readFileSync("input.txt").toString()
+    .split(",").forEach(x=> state[parseInt(x,10)] += 1);
 
 const sumArray = arr => arr.reduce((acc, curr) => acc + curr, 0);
+const PART1 = 80, PART2 = 256;
 
+// Run simulation
 let i = 0;
-while (i < part2) {
+while (i < PART2) {
     const prev = state.shift();
     state.push(prev);
     state[6] += prev;
     i++;
-    if (i === part1 || i === part2) {
+    // Record total population on target days by summing individuals in each day
+    if (i === PART1 || i === PART2) {
         console.log("TOTAL FISH after " + i + " days: " + sumArray(state));
     }
 }

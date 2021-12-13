@@ -2,13 +2,14 @@
 
 ## Run it
 ```
-node day6.js
+time node day6.js
 ```
 
 ## Results
 ```
-TOTAL FISH after 80 days: 374928
-TOTAL FISH after 256 days: 1687617803407 
+TOTAL FISH after 80 days: 374927
+TOTAL FISH after 256 days: 1687617803407
+node day6.js  0.04s user 0.01s system 95% cpu 0.060 total
 ```
 
 ## Space/time complexity
