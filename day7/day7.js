@@ -31,9 +31,7 @@ let min_cost,
     curr_position = avg(positions),
     curr_cost;
 
-const STEP = 1;
-
-// move left/right by STEP until we find a local minima
+// Move left/right until we find a local minima
 while (true) {
     curr_cost = cost(curr_position);
     const left_pos = curr_position - 1;
